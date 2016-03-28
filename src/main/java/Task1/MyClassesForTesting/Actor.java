@@ -20,17 +20,17 @@ public class Actor {
         this.actorLastName = actorLastName;
     }
 
-    @Test(description = "Set actor first name test")
+    @Test(description = "Actor first name")
     public void setActorFirstName(String actorFirstName) {
         this.actorFirstName = actorFirstName;
     }
 
-    @Test(description = "Set actor last name test")
+    @Test(description = "Actor last name")
     public void setActorLastName(String actorLastName) {
         this.actorLastName = actorLastName;
     }
 
-    @Test(description = "testing work with exception", expected = "MyException")
+    @Test(description = "work with exception", expected = "MyException")
     private void testException() throws MyException {
 
         throw new MyException("My exception is throwed!!!");

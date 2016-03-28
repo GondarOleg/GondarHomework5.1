@@ -34,19 +34,19 @@ public class TestExecution {
 
     public static void testMethod(Method method, Actor actor) throws InvocationTargetException, IllegalAccessException {
 
-        if (method.getAnnotation(Test.class).description().equals("Set actor first name test")) {
+        if (method.getAnnotation(Test.class).description().equals("Actor first name")) {
             method.invoke(actor, "First");
             assertTrue(actor.getActorFirstName().equals("First"));
             System.out.println("Actor first name test passed");
         }
 
-        if (method.getAnnotation(Test.class).description().equals("Set actor last name test")) {
+        if (method.getAnnotation(Test.class).description().equals("Actor last name")) {
             method.invoke(actor, "Last");
             assertTrue(actor.getActorLastName().equals("Last"));
             System.out.println("Actor last name test passed");
         }
 
-        if (method.getAnnotation(Test.class).description().equals("testing work with exception")) {
+        if (method.getAnnotation(Test.class).description().equals("work with exception")) {
             try {
                 method.invoke(actor);
             } catch (Exception e) {
